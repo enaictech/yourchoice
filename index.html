@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>you-made &mdash; Your home business, organized on WhatsApp</title>
+<title>Nidhi &mdash; Your home business, organized on WhatsApp</title>
 <style>
 /* ── TOKENS ── */
 :root{
@@ -31,7 +31,9 @@ button{font-family:inherit;cursor:pointer}
 /* ── NAV ── */
 nav{position:sticky;top:0;z-index:200;background:rgba(255,250,245,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:58px;padding:0 20px;display:flex;align-items:center;gap:16px}
 [data-theme="dark"] nav{background:rgba(15,5,0,.94)}
-.logo{font-size:20px;font-weight:900;background:linear-gradient(90deg,var(--sun1),var(--sun3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;letter-spacing:-.3px}
+.logo{display:flex;align-items:center;gap:6px;flex-shrink:0;text-decoration:none}
+.logo-bag{font-size:22px;line-height:1;flex-shrink:0}
+.logo-word{font-size:20px;font-weight:900;letter-spacing:-.5px;background:linear-gradient(90deg,var(--sun1),var(--sun3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-links{display:flex;gap:20px;list-style:none;flex:1}
 .nav-links a{font-size:13px;font-weight:500;color:var(--text2);transition:color .2s}
 .nav-links a:hover{color:var(--sun1)}
@@ -212,6 +214,66 @@ h2{font-size:26px;font-weight:800;line-height:1.18;letter-spacing:-.3px}
 .gi-text{font-size:13px;color:rgba(240,255,244,.75);line-height:1.65}
 .gi-text strong{color:#F0FFF4}
 
+/* ── SOCIAL PROOF MICROLINE ── */
+.proof-line{display:flex;align-items:center;gap:10px;margin-top:18px;flex-wrap:wrap}
+.avatars{display:flex}
+.avatars span{width:30px;height:30px;border-radius:50%;border:2px solid var(--bg);margin-left:-9px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff}
+.avatars span:first-child{margin-left:0}
+.proof-txt{font-size:13px;color:var(--text2)}
+.proof-txt strong{color:var(--text)}
+.stars{color:#F59E0B;font-size:13px;letter-spacing:1px}
+
+/* ── EARN-BACK STRIP ── */
+.earnback{background:linear-gradient(135deg,#0F6E56,#1D9E75);color:#fff;border-radius:16px;padding:20px 22px;margin-top:22px;display:flex;align-items:center;gap:16px}
+.eb-big{font-size:34px;flex-shrink:0}
+.eb-txt{font-size:15px;line-height:1.5}
+.eb-txt strong{font-weight:800}
+
+/* ── TESTIMONIALS ── */
+.tcards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.tc{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px 20px;box-shadow:var(--shadow)}
+.tc-stars{color:#F59E0B;font-size:14px;letter-spacing:1px;margin-bottom:10px}
+.tc-quote{font-size:14px;color:var(--text);line-height:1.6;margin-bottom:16px}
+.tc-quote strong{color:var(--sun1)}
+.tc-who{display:flex;align-items:center;gap:10px}
+.tc-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0}
+.tc-name{font-size:13px;font-weight:700}
+.tc-biz{font-size:11px;color:var(--text2)}
+
+/* ── URGENCY BANNER ── */
+.urgency{background:#FFF4E6;border:1.5px dashed var(--sun1);border-radius:14px;padding:14px 18px;margin-top:28px;display:flex;align-items:center;justify-content:center;gap:10px;text-align:center;flex-wrap:wrap}
+.urgency-dot{width:9px;height:9px;border-radius:50%;background:#EF4444;flex-shrink:0;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.urgency-txt{font-size:13.5px;color:#9A3412;font-weight:600}
+.urgency-txt strong{color:#C2410C}
+[data-theme="dark"] .urgency{background:#2A1206}
+
+/* ── VS COMPARE (phone vs phone) ── */
+.vs-wrap{display:flex;align-items:center;justify-content:center;gap:0;margin-top:40px}
+.vs-phone{flex:1;max-width:300px;background:var(--card);border-radius:26px;padding:14px 12px 16px;box-shadow:var(--shadow)}
+.vs-phone.bad{border:1px solid rgba(239,68,68,.25)}
+.vs-phone.good{border:1px solid rgba(29,158,117,.3)}
+.vs-top{display:flex;align-items:center;gap:8px;border-radius:12px;padding:9px 11px;margin-bottom:12px}
+.vs-top.wa{background:#075E54}
+.vs-top.app{background:linear-gradient(135deg,var(--sun1),var(--sun3))}
+.vs-dp{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.vs-tt{font-size:12px;font-weight:700;color:#fff;line-height:1.2}
+.vs-ts{font-size:9px;color:rgba(255,255,255,.7)}
+.vs-unread{margin-left:auto;background:#EF4444;color:#fff;font-size:10px;font-weight:800;border-radius:999px;padding:2px 8px;flex-shrink:0}
+.vs-bub{background:var(--bg2);border-radius:10px;border-bottom-left-radius:3px;padding:7px 10px;font-size:11px;margin-bottom:7px;max-width:88%;color:var(--text)}
+.vs-bub.r1{transform:rotate(-.6deg)}
+.vs-bub.r2{transform:rotate(.8deg);margin-left:auto;background:#DCF8C6;border-bottom-right-radius:3px;border-bottom-left-radius:10px}
+.vs-foot{margin-top:10px;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:700;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px}
+.vs-foot.bad{background:#FEE2E2;color:#DC2626}
+.vs-foot.good{background:#E6F7F0;color:#0F6E56}
+.vs-card{background:var(--bg2);border-radius:12px;padding:11px 12px}
+.vs-cr{display:flex;justify-content:space-between;font-size:11px;padding:3px 0;color:var(--text2)}
+.vs-cr.hd{font-size:12px;font-weight:800;color:var(--text);padding-bottom:6px}
+.vs-cr.tot{border-top:1px solid var(--border);margin-top:5px;padding-top:6px;font-weight:800;color:var(--text);font-size:12px}
+.vs-mid{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 12px}
+.vs-badge{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--sun1),var(--sun3));color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;box-shadow:0 4px 12px -3px rgba(255,107,53,.4)}
+.vs-arrow{font-size:24px;color:var(--sun1);line-height:1}
+
 /* ── FOOTER ── */
 footer{text-align:center;padding:28px 20px;font-size:12px;color:var(--text2);border-top:1px solid var(--border);margin-top:48px}
 footer a{color:var(--sun1);font-weight:600}
@@ -233,6 +295,14 @@ footer a{color:var(--sun1);font-weight:600}
   .screens{flex-direction:column}
   .sp{width:100%;flex:none}
   .ba{grid-template-columns:1fr}
+  .vs-wrap{flex-direction:column;gap:0}
+  .vs-phone{max-width:100%;width:100%}
+  .vs-mid{flex-direction:row;padding:12px 0}
+  .vs-mid .vs-arrow{transform:rotate(90deg)}
+  .tcards{grid-template-columns:1fr}
+  .earnback{padding:16px}
+  .eb-big{font-size:28px}
+  .eb-txt{font-size:14px}
   .pcards{flex-direction:column}
   .pw,.ctaw,.govt-wrap{margin:0 10px;padding:24px 14px}
   .scheme-grid{grid-template-columns:1fr 1fr}
@@ -263,23 +333,26 @@ footer a{color:var(--sun1);font-weight:600}
 
 <!-- NAV -->
 <nav>
-  <div class="logo">you-made</div>
+  <a href="#hero" class="logo">
+    <span class="logo-bag">&#128176;</span>
+    <span class="logo-word">Nidhi</span>
+  </a>
   <ul class="nav-links">
     <li><a href="#what">What you sell</a></li>
     <li><a href="#how">How it works</a></li>
-    <li><a href="#screens">See it live</a></li>
+    <li><a href="#stories">Success stories</a></li>
     <li><a href="#pricing">Pricing</a></li>
   </ul>
   <button class="theme-btn" id="themeBtn">&#127769;</button>
-  <a href="https://wa.me/919902956374?text=Hi%2C%20I%20want%20to%20know%20more%20about%20you-made" class="nav-wa">&#128172; WhatsApp us</a>
+  <a href="https://wa.me/919902956374?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Nidhi" class="nav-wa">&#128172; WhatsApp us</a>
   <button class="hamburger" id="ham"><span></span><span></span><span></span></button>
 </nav>
 <div class="mob-menu" id="mobMenu">
   <a href="#what" onclick="closeM()">What you can sell</a>
   <a href="#how" onclick="closeM()">How it works</a>
-  <a href="#screens" onclick="closeM()">See it live</a>
+  <a href="#stories" onclick="closeM()">Success stories</a>
   <a href="#pricing" onclick="closeM()">Pricing</a>
-  <a href="https://wa.me/919902956374?text=Hi%2C%20I%20want%20to%20know%20more%20about%20you-made" class="nav-wa" onclick="closeM()">&#128172; WhatsApp us now</a>
+  <a href="https://wa.me/919902956374?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Nidhi" class="nav-wa" onclick="closeM()">&#128172; WhatsApp us now</a>
 </div>
 
 <!-- HERO -->
@@ -295,10 +368,24 @@ footer a{color:var(--sun1);font-weight:600}
         <span class="tr">1-day setup</span>
         <span class="tr">No tech needed</span>
         <span class="tr b">Works on any phone</span>
+        <span class="tr" style="background:#FFF9E6;color:#B45309;border-color:rgba(180,83,9,.2)">&#127775; Women&rsquo;s loan eligible</span>
       </div>
       <div class="hero-btns">
-        <a href="https://wa.me/919902956374?text=Hi%2C%20I%20want%20to%20start%20with%20you-made" class="btn-wa">&#128172; Start for &#8377;2,000</a>
+        <a href="https://wa.me/919902956374?text=Hi%2C%20I%20want%20to%20start%20with%20Nidhi" class="btn-wa">&#128172; Start for &#8377;2,000</a>
         <a href="#how" class="btn-s">See how it works</a>
+      </div>
+      <div class="proof-line">
+        <div class="avatars">
+          <span style="background:#FF6B35">S</span>
+          <span style="background:#EC4899">L</span>
+          <span style="background:#8B5CF6">R</span>
+          <span style="background:#1D9E75">M</span>
+        </div>
+        <span class="proof-txt"><strong>200+ women</strong> already growing with Nidhi <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>
+      </div>
+      <div class="earnback">
+        <span class="eb-big">&#128176;</span>
+        <span class="eb-txt"><strong>Nidhi pays for itself in 2 days.</strong><br>One day of extra orders covers the whole cost. After that &mdash; it&rsquo;s pure profit, every day.</span>
       </div>
     </div>
     <div class="phone-wrap">
@@ -332,11 +419,88 @@ footer a{color:var(--sun1);font-weight:600}
   </div>
 </section>
 
+<!-- WOMEN'S LOANS — moved to top for impact -->
+<section class="sec" id="future" style="max-width:none;padding:24px 0">
+  <div class="govt-wrap">
+    <p class="govt-tag">&#127775; Women&rsquo;s Reservation in Banking</p>
+    <h2 style="color:#F0FFF4">When you have your business data,<br><span style="color:#4ADE80">you are eligible for Women&rsquo;s Reserved Loans.</span></h2>
+    <p class="govt-lead">
+      The government has kept special seats <strong>only for women in business.</strong> Every bank has loans reserved just for you. They need one thing: proof of your income. <strong>Nidhi gives you that proof — automatically, every single day.</strong>
+    </p>
+    <div class="data-journey">
+      <div class="dj-step">
+        <div class="dj-box"><div class="dj-ico">&#128722;</div><div class="dj-txt">You take orders<br>on WhatsApp</div></div>
+        <div class="dj-lbl">Day 1</div>
+      </div>
+      <div class="dj-step"><div class="dj-arr">&#8594;</div></div>
+      <div class="dj-step">
+        <div class="dj-box"><div class="dj-ico">&#128202;</div><div class="dj-txt">Nidhi stores<br>your data</div></div>
+        <div class="dj-lbl">Every day</div>
+      </div>
+      <div class="dj-step"><div class="dj-arr">&#8594;</div></div>
+      <div class="dj-step">
+        <div class="dj-box"><div class="dj-ico">&#128196;</div><div class="dj-txt">Your income<br>proof is ready</div></div>
+        <div class="dj-lbl">6 months</div>
+      </div>
+      <div class="dj-step"><div class="dj-arr">&#8594;</div></div>
+      <div class="dj-step">
+        <div class="dj-box"><div class="dj-ico">&#127970;</div><div class="dj-txt">Apply for your<br>reserved loan</div></div>
+        <div class="dj-lbl">When ready</div>
+      </div>
+      <div class="dj-step"><div class="dj-arr">&#8594;</div></div>
+      <div class="dj-step">
+        <div class="dj-box" style="border-color:rgba(74,222,128,.4);background:rgba(74,222,128,.08)"><div class="dj-ico">&#127881;</div><div class="dj-txt" style="color:#4ADE80">Your business<br>grows big</div></div>
+        <div class="dj-lbl" style="color:#4ADE80;font-weight:600">Your dream</div>
+      </div>
+    </div>
+    <div class="scheme-grid">
+      <div class="scheme">
+        <div class="sch-amt">Up to &#8377;20 lakhs</div>
+        <div class="sch-name">Stand Up India &mdash; Women Reserved</div>
+        <div class="sch-desc">Bank loan kept aside only for women who run their own business. You qualify.</div>
+      </div>
+      <div class="scheme">
+        <div class="sch-amt">Up to &#8377;10 lakhs</div>
+        <div class="sch-name">PM Mudra Yojana</div>
+        <div class="sch-desc">No collateral needed. Available at any bank. For home businesses exactly like yours.</div>
+      </div>
+      <div class="scheme">
+        <div class="sch-amt">Up to &#8377;3 lakhs</div>
+        <div class="sch-name">Udyogini Scheme &mdash; Women Only</div>
+        <div class="sch-desc">Free grant for women in food, beauty and home services. Some categories need no repayment.</div>
+      </div>
+      <div class="scheme">
+        <div class="sch-amt">Up to &#8377;50,000</div>
+        <div class="sch-name">Annapurna Scheme</div>
+        <div class="sch-desc">For tiffin and food women specifically. Low interest, easy to get approved.</div>
+      </div>
+      <div class="scheme">
+        <div class="sch-amt">Free</div>
+        <div class="sch-name">MSME Udyam Registration</div>
+        <div class="sch-desc">Register your home business in 10 minutes. Opens the door to all government loan schemes.</div>
+      </div>
+      <div class="scheme">
+        <div class="sch-amt">Zero interest</div>
+        <div class="sch-name">Stree Shakti Loans</div>
+        <div class="sch-desc">Banks give first priority to women who have written proof of their business income.</div>
+      </div>
+    </div>
+    <div class="govt-insight">
+      <div class="gi-ico">&#128161;</div>
+      <div class="gi-text">
+        <strong>The bank officer will ask: &ldquo;Madam, do you have records of your business?&rdquo;</strong><br>
+        With Nidhi, your answer is always <strong>YES.</strong> 6 months of saved orders is all you need to walk into any bank with confidence and claim what is reserved for you.<br><br>
+        <strong>&#8377;2,000 today. &#8377;20 lakhs reserved for you tomorrow.</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHAT CAN YOU SELL -->
 <section class="sec" id="what">
   <p class="tag">What you can sell</p>
-  <h2>Food, beauty, classes, organic &mdash;<br><span class="hl">all on WhatsApp, all in one place</span></h2>
-  <p class="lead">Whatever you make at home &mdash; your neighbours can order it. You don&rsquo;t need a shop. Just a phone and this app.</p>
+  <h2>No matter what your business is,<br><span class="hl">you can have this easy app.</span></h2>
+  <p class="lead">Food, beauty, classes, organic, pickles &mdash; whatever you do from home, this app stores your orders, tracks your data, and keeps your business organized. No shop needed. Just your phone.</p>
   <div class="cat-grid">
 
     <div class="cc ti">
@@ -479,35 +643,81 @@ footer a{color:var(--sun1);font-weight:600}
 <!-- BEFORE / AFTER -->
 <section class="sec" id="compare">
   <p class="tag">The difference</p>
-  <h2>From scattered messages<br>to <span class="hl">organized orders</span></h2>
-  <div class="ba">
-    <div class="bp bef">
-      <div class="ba-lbl r">&#128549; Before you-made &mdash; every day</div>
-      <div class="cm cin"><div class="cb">amma 2 idli please &#128591;</div><div class="ct">8:14 AM</div></div>
-      <div class="cm cin"><div class="cb">hello order karo na</div><div class="ct">8:45 AM</div></div>
-      <div class="cm cin"><div class="cb">madam aaj dosa hai kya??</div><div class="ct">9:01 AM</div></div>
-      <div class="cm cout"><div class="cb">haan hai &#128522;</div><div class="ct" style="text-align:right">9:05 AM &#10003;&#10003;</div></div>
-      <div class="cm cin"><div class="cb">ok 1 dosa</div><div class="ct">9:08 AM</div></div>
-      <div class="cm cin"><div class="cb">cancel my order please</div><div class="ct">10:45 AM</div></div>
-      <span class="clbl" style="background:#FEE2E2;color:#DC2626">&#128561; Who ordered? Which flat? How many?</span>
-    </div>
-    <div class="bp aft">
-      <div class="ba-lbl g">&#10003; With you-made &mdash; organized</div>
-      <div class="oc">
-        <div class="och"><span>New Order &#128722;</span><span style="font-weight:400;opacity:.5">9:03 AM</span></div>
-        <div class="ocr"><span style="opacity:.45">From</span><span><strong>Priya Sharma &middot; A-204</strong></span></div>
-        <div class="ocr"><span style="opacity:.45">Society</span><span>Willet Residency</span></div>
-        <div style="border-top:1px solid var(--border);margin:8px 0"></div>
-        <div class="ocr"><span>Idli &times; 2</span><span>&#8377;40</span></div>
-        <div class="ocr"><span>Dosa &times; 1</span><span>&#8377;30</span></div>
-        <div class="oct"><span>Total</span><span>&#8377;70</span></div>
+  <h2>Messy chats <span class="hl">&#8594;</span> one clean app</h2>
+  <div class="vs-wrap">
+
+    <div class="vs-phone bad">
+      <div class="vs-top wa">
+        <div class="vs-dp">&#128172;</div>
+        <div><div class="vs-tt">WhatsApp Chats</div><div class="vs-ts">always buzzing</div></div>
+        <span class="vs-unread">18</span>
       </div>
-      <div class="cm cout" style="margin-top:10px">
-        <div class="cb">Order confirmed &#10003; Ready by 12:30 PM &#128591;</div>
-        <div class="ct" style="text-align:right">9:03 AM &#10003;&#10003;</div>
-      </div>
-      <span class="clbl" style="background:#E6F7F0;color:#0F6E56">&#128200; Full report compiled at end of day</span>
+      <div class="vs-bub r1">2 idli? &#128591;</div>
+      <div class="vs-bub r2">haan</div>
+      <div class="vs-bub r2" style="transform:rotate(-.5deg)">dosa hai kya??</div>
+      <div class="vs-bub r1">cancel kar do</div>
+      <div class="vs-bub r2" style="transform:rotate(.6deg)">flat no bhej do</div>
+      <div class="vs-bub r1" style="transform:rotate(-.7deg)">kitna hua?</div>
+      <div class="vs-foot bad">&#128561; Orders lost. Money lost.</div>
     </div>
+
+    <div class="vs-mid">
+      <div class="vs-badge">VS</div>
+      <div class="vs-arrow">&#8594;</div>
+    </div>
+
+    <div class="vs-phone good">
+      <div class="vs-top app">
+        <div class="vs-dp">&#128176;</div>
+        <div><div class="vs-tt">Nidhi</div><div class="vs-ts">all sorted</div></div>
+        <span class="vs-unread" style="background:#1D9E75">&#10003;</span>
+      </div>
+      <div class="vs-card">
+        <div class="vs-cr hd"><span>&#128722; New Order</span><span style="opacity:.5;font-weight:400">9:03</span></div>
+        <div class="vs-cr"><span>&#128100; Priya</span><span>A-204</span></div>
+        <div class="vs-cr"><span>Idli &times; 2</span><span>&#8377;40</span></div>
+        <div class="vs-cr"><span>Dosa &times; 1</span><span>&#8377;30</span></div>
+        <div class="vs-cr tot"><span>Total</span><span>&#8377;70</span></div>
+      </div>
+      <div class="vs-foot good">&#9989; Every order. Every rupee. Saved.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec" id="stories">
+  <p class="tag">Real women. Real earnings.</p>
+  <h2>They started with a phone.<br><span class="hl">Now they run a business.</span></h2>
+  <div class="tcards">
+    <div class="tc">
+      <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="tc-quote">&ldquo;Before, I forgot orders and lost money daily. Now I get <strong>40 orders a day</strong> and a clean report every morning. My income doubled in 3 months.&rdquo;</p>
+      <div class="tc-who">
+        <div class="tc-av" style="background:#FF6B35">S</div>
+        <div><div class="tc-name">Sunita R.</div><div class="tc-biz">Tiffin &middot; Whitefield</div></div>
+      </div>
+    </div>
+    <div class="tc">
+      <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="tc-quote">&ldquo;I sell cakes from home. Nidhi made me look professional. Customers trust me more. I now earn <strong>&#8377;35,000 a month</strong> &mdash; from my own kitchen.&rdquo;</p>
+      <div class="tc-who">
+        <div class="tc-av" style="background:#EC4899">L</div>
+        <div><div class="tc-name">Lakshmi P.</div><div class="tc-biz">Home Bakes &middot; HSR Layout</div></div>
+      </div>
+    </div>
+    <div class="tc">
+      <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="tc-quote">&ldquo;Setup took one day. I am not tech-savvy at all, but it was so easy. The whole society now orders pickles from me. <strong>Best &#8377;2,000 I ever spent.</strong>&rdquo;</p>
+      <div class="tc-who">
+        <div class="tc-av" style="background:#8B5CF6">R</div>
+        <div><div class="tc-name">Radha M.</div><div class="tc-biz">Pickles &middot; Marathahalli</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="urgency">
+    <span class="urgency-dot"></span>
+    <span class="urgency-txt">We set up only <strong>5 new kitchens a week</strong> to give each woman full attention. <strong>3 slots left this week.</strong></span>
   </div>
 </section>
 
@@ -516,7 +726,7 @@ footer a{color:var(--sun1);font-weight:600}
   <div class="pw">
     <p class="tag">Pricing &mdash; simple &amp; fair</p>
     <h2>Pay &#8377;2,000 today.<br><span class="hl">Own this app in 30 days.</span></h2>
-    <p class="lead">Just two payments. No long wait. See it working first &mdash; then pay the rest. <strong>The app is yours for life after Day 30.</strong></p>
+    <p class="lead">A website costs <strong>&#8377;20,000+</strong>. Nidhi is just <strong>&#8377;4,000 total</strong> &mdash; that&rsquo;s <strong>92% less</strong>, and barely <strong>&#8377;11 a day</strong> for your first year. Less than one cup of chai. See it working first, then pay the rest. <strong>Yours for life after Day 30.</strong></p>
     <div class="pp">
       <div class="pst"><div class="psc done">&#8377;2,000<br>Day 1</div><div class="psl">Setup done</div></div>
       <div class="pst"><div class="arr">&#8594;</div></div>
@@ -528,7 +738,7 @@ footer a{color:var(--sun1);font-weight:600}
     </div>
     <div class="pcards">
       <div class="pc hl">
-        <div class="pt2">you-made &mdash; own it</div>
+        <div class="pt2">Nidhi &mdash; own it</div>
         <div class="pa">&#8377;2,000 <sub>+ &#8377;2,000 on Day 30</sub></div>
         <div class="pd">Setup today. Use it for 30 days. Pay the completion fee. <strong>After that &mdash; the app is yours. No more payments. Ever.</strong></div>
         <ul class="pl">
@@ -540,7 +750,7 @@ footer a{color:var(--sun1);font-weight:600}
           <li>1-day setup &mdash; we do it for you</li>
           <li>WhatsApp support whenever you need us</li>
         </ul>
-        <a href="https://wa.me/919902956374?text=Hi%2C%20I%20want%20to%20start%20with%20you-made%20for%20%E2%82%B92000" class="btn-wa" style="width:100%;justify-content:center;border-radius:10px;padding:13px;font-size:14px">&#128172; Start today for &#8377;2,000</a>
+        <a href="https://wa.me/919902956374?text=Hi%2C%20I%20want%20to%20start%20with%20Nidhi%20for%20%E2%82%B92000" class="btn-wa" style="width:100%;justify-content:center;border-radius:10px;padding:13px;font-size:14px">&#128172; Start today for &#8377;2,000</a>
       </div>
       <div class="pc">
         <div class="pt2">Custom website</div>
@@ -559,89 +769,6 @@ footer a{color:var(--sun1);font-weight:600}
   </div>
 </section>
 
-<!-- GOVT SCHEMES -->
-<section class="sec" id="future" style="max-width:none;padding:48px 0">
-  <div class="govt-wrap">
-    <p class="govt-tag">&#127775; Think ahead &mdash; your data is your future</p>
-    <h2 style="color:#F0FFF4">Maintain your data today.<br>Get a <span style="color:#4ADE80">government loan up to &#8377;20 lakhs</span> tomorrow.</h2>
-    <p class="govt-lead">
-      Banks don&rsquo;t give loans on trust. They give loans on <strong>proof &mdash; your business records, your income, your data.</strong> Every order you take with us builds that proof automatically.
-    </p>
-
-    <!-- Data journey -->
-    <div class="data-journey">
-      <div class="dj-step">
-        <div class="dj-box"><div class="dj-ico">&#128722;</div><div class="dj-txt">You take orders<br>on WhatsApp</div></div>
-        <div class="dj-lbl">Day 1</div>
-      </div>
-      <div class="dj-step"><div class="dj-arr">&#8594;</div></div>
-      <div class="dj-step">
-        <div class="dj-box"><div class="dj-ico">&#128202;</div><div class="dj-txt">Data is stored<br>organized</div></div>
-        <div class="dj-lbl">Every day</div>
-      </div>
-      <div class="dj-step"><div class="dj-arr">&#8594;</div></div>
-      <div class="dj-step">
-        <div class="dj-box"><div class="dj-ico">&#128196;</div><div class="dj-txt">Business proof<br>is ready</div></div>
-        <div class="dj-lbl">6&ndash;12 months</div>
-      </div>
-      <div class="dj-step"><div class="dj-arr">&#8594;</div></div>
-      <div class="dj-step">
-        <div class="dj-box"><div class="dj-ico">&#127970;</div><div class="dj-txt">Apply for loan<br>or grant</div></div>
-        <div class="dj-lbl">When ready</div>
-      </div>
-      <div class="dj-step"><div class="dj-arr">&#8594;</div></div>
-      <div class="dj-step">
-        <div class="dj-box" style="border-color:rgba(74,222,128,.4);background:rgba(74,222,128,.08)"><div class="dj-ico">&#127881;</div><div class="dj-txt" style="color:#4ADE80">Your business<br>grows big</div></div>
-        <div class="dj-lbl" style="color:#4ADE80;font-weight:600">Your dream</div>
-      </div>
-    </div>
-
-    <!-- Schemes -->
-    <div class="scheme-grid">
-      <div class="scheme">
-        <div class="sch-amt">Up to &#8377;10 lakhs</div>
-        <div class="sch-name">PM Mudra Yojana</div>
-        <div class="sch-desc">Government loan for small home businesses. No collateral needed. Available at any bank.</div>
-      </div>
-      <div class="scheme">
-        <div class="sch-amt">Up to &#8377;20 lakhs</div>
-        <div class="sch-name">Stand Up India</div>
-        <div class="sch-desc">Specially for women entrepreneurs. Bank loan to start or grow a business from home.</div>
-      </div>
-      <div class="scheme">
-        <div class="sch-amt">Up to &#8377;3 lakhs</div>
-        <div class="sch-name">Udyogini Scheme</div>
-        <div class="sch-desc">Free grant for women in food, beauty, and home services. No repayment required for many categories.</div>
-      </div>
-      <div class="scheme">
-        <div class="sch-amt">Up to &#8377;50,000</div>
-        <div class="sch-name">Annapurna Scheme</div>
-        <div class="sch-desc">Specifically for women running food and tiffin businesses. Low interest, easy approval.</div>
-      </div>
-      <div class="scheme">
-        <div class="sch-amt">Free support</div>
-        <div class="sch-name">MSME Udyam Registration</div>
-        <div class="sch-desc">Register your home business in 10 minutes. Unlocks tax benefits, insurance, and priority loan access.</div>
-      </div>
-      <div class="scheme">
-        <div class="sch-amt">Zero interest</div>
-        <div class="sch-name">Stree Shakti &amp; SHG Loans</div>
-        <div class="sch-desc">Self-help group loans for women. Banks give priority to women with documented business history.</div>
-      </div>
-    </div>
-
-    <!-- Key insight -->
-    <div class="govt-insight">
-      <div class="gi-ico">&#128161;</div>
-      <div class="gi-text">
-        <strong>Banks ask one thing first: &ldquo;Show me your records.&rdquo;</strong><br>
-        With you-made, every order is automatically saved &mdash; date, amount, customer, product. After 6 months you walk in with real proof. That is what gets you the loan.<br><br>
-        <strong>&#8377;2,000 today. &#8377;20 lakhs possible tomorrow.</strong>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT CTA -->
 <section class="sec" id="contact" style="max-width:none;padding:48px 0 72px">
   <div class="ctaw">
@@ -649,7 +776,7 @@ footer a{color:var(--sun1);font-weight:600}
     <h2>Send us a WhatsApp.<br>We set everything up for you.</h2>
     <p class="lead">Tell us your name, what you sell, and your society. <strong>We build your menu page and show you how to use it &mdash; all in one day.</strong></p>
     <div class="cr">
-      <a href="https://wa.me/919902956374?text=Hi%2C%20I%20want%20to%20start%20with%20you-made" class="btn-wa" style="font-size:15px;padding:14px 28px;border-radius:12px">&#128172; WhatsApp: 9902956374</a>
+      <a href="https://wa.me/919902956374?text=Hi%2C%20I%20want%20to%20start%20with%20Nidhi" class="btn-wa" style="font-size:15px;padding:14px 28px;border-radius:12px">&#128172; WhatsApp: 9902956374</a>
       <a href="mailto:enykandsree@gmail.com" class="btn-p" style="background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.45);font-size:15px;padding:13px 22px;border-radius:12px">&#9993; enykandsree@gmail.com</a>
     </div>
     <div class="snote">&#9200; <strong>1-day setup</strong> &nbsp;&middot;&nbsp; From scribbled orders to organized business &mdash; starting tomorrow.</div>
@@ -657,7 +784,7 @@ footer a{color:var(--sun1);font-weight:600}
 </section>
 
 <footer>
-  <strong>you-made</strong> &nbsp;&middot;&nbsp; Helping home business women organize and grow &nbsp;&middot;&nbsp; &#8377;2,000 setup &nbsp;&middot;&nbsp; &#8377;2,000 on Day 30 &nbsp;&middot;&nbsp;
+  <strong>Nidhi</strong> &nbsp;&middot;&nbsp; Helping home business women organize and grow &nbsp;&middot;&nbsp; &#8377;2,000 setup &nbsp;&middot;&nbsp; &#8377;2,000 on Day 30 &nbsp;&middot;&nbsp;
   <a href="https://wa.me/919902956374">9902956374</a> &nbsp;&middot;&nbsp;
   <a href="mailto:enykandsree@gmail.com">enykandsree@gmail.com</a>
 </footer>
